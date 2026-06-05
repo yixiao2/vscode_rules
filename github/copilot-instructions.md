@@ -58,3 +58,34 @@
 - Avoid repeated command retries.
 - Avoid assuming Python/Bash are reliable in this remote environment.
 
+## Priority
+- The NERSC/remote-HPC execution constraints take priority over all general coding rules.
+- Do not run Python, Bash, notebooks, tests, installs, kernels, servers, or long-running jobs unless explicitly requested or approved.
+
+## Ambiguity and clarification
+- Do not guess when requirements, file targets, expected outputs, or constraints are unclear.
+- Ask a concise clarification question before making changes that could go in multiple valid directions.
+- If multiple interpretations are possible, briefly state them and let the user choose.
+
+## Tradeoffs and pushback
+- When there are multiple reasonable approaches, briefly surface the tradeoffs instead of silently choosing one.
+- Prefer the least invasive approach unless the user asks for a broader redesign.
+- If the requested approach seems unnecessarily complex, brittle, or over-engineered, briefly propose a simpler alternative before writing code.
+
+## Simplicity first
+- Write the smallest amount of code needed to solve the stated problem.
+- Avoid speculative features, future-proofing, generalized APIs, or extra options unless explicitly requested.
+- Do not introduce new frameworks, configuration systems, classes, wrappers, or abstractions unless clearly needed.
+- Prefer simple, direct code that matches the user's current workflow.
+
+## Surgical changes
+- Touch only the lines/files necessary to satisfy the request.
+- Do not perform drive-by refactors, formatting changes, typo fixes, comment rewrites, or style cleanup outside the requested scope.
+- Preserve existing naming, structure, and style unless changing them is necessary.
+- If your changes create newly unused imports, variables, or helper code, remove those changes; do not clean up unrelated pre-existing dead code.
+
+## Success criteria and verification
+- For non-trivial bug fixes, features, or notebook changes, first identify concise success criteria.
+- Prefer verifiable changes, but do not run Python, Bash, notebooks, or tests unless explicitly requested or approved.
+- When execution is restricted, provide manual verification steps or test code for the user to run.
+- If a bug fix requires runtime confirmation, explain what should be tested and what result would confirm success.
