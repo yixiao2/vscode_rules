@@ -8,19 +8,19 @@ On each WSL distro and each Remote-SSH server account, clone the parent repo und
 `$HOME`:
 
 ```bash
-git clone git@github.com:YOURNAME/set_clinerules ~/set_clinerules
+git clone git@github.com:YOURNAME/vscode_rules ~/vscode_rules
 ```
 
 Then run the Codex link installer:
 
 ```bash
-~/set_clinerules/codex-customizations/agents/install/setup-codex-links.sh
+~/vscode_rules/codex-customizations/agents/install/setup-codex-links.sh
 ```
 
 To preview changes first:
 
 ```bash
-~/set_clinerules/codex-customizations/agents/install/setup-codex-links.sh --dry-run
+~/vscode_rules/codex-customizations/agents/install/setup-codex-links.sh --dry-run
 ```
 
 ## What The Installer Links
